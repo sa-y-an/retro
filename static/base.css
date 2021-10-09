@@ -3,3 +3,62 @@
     padding: 0;
     margin: 0;
 }
+
+
+  
+.jumbotron{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    
+    
+}
+
+.box {
+    padding: 0.5em;
+    border-radius: 1em;
+    max-width: 40vw;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+@media screen and (max-width: 480px) {
+    .box{
+        max-width: 90vw;
+    }
+    
+}
+
+.main-head{
+    font-size: 3.5em;
+    font-weight: bold;
+    animation: mymove 4s infinite;
+}
+
+.sub-head {
+    font-size: 2em;
+    font-weight: lighter;
+
+}
+
+@keyframes mymove {
+    50% {text-shadow: 4px 4px 4px white;}
+  }
+
+.big{
+
+    min-height: 100vh;
+    overflow-y: hidden;
+    background: url('images/buddha.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.btn {
+    background-color: rgba(255, 255, 255, 0.1);
+}
