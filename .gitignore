@@ -9,5 +9,5 @@ __pycache__/
 staticfiles
 media
 myenv
-*.env
+*.config
 *workspace.code-workspace
