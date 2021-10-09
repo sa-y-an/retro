@@ -12,3 +12,6 @@ def emg(request) :
 
 def ecg(request) :
     return render(request, 'home/ecg.html')
+
+def resp(request) :
+    return render(request, 'home/resp.html')
