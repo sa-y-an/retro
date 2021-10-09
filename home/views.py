@@ -15,3 +15,6 @@ def ecg(request) :
 
 def resp(request) :
     return render(request, 'home/resp.html')
+
+def temp(request) :
+    return render(request, 'home/temp.html')
