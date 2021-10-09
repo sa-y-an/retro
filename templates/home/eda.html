@@ -3,6 +3,33 @@
 
 {% block content %}
 
-EDA  Rate 
+<div class="container">
+    <h2>
+        Got your EDA Data
+    </h2>
+
+    <div class="container upload">
+        <form method="post" enctype="multipart/form-data" action="">
+                <div class="mb-3 form-group formcont">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary">Upload</button>
+            </div>
+        </form>
+        
+        {% if img_obj %}
+            <p>Succesfully uploaded : {{img_obj.title}}</p>
+            
+        {% endif %}
+    </div>
+
+    {% if img_obj.ans_class %}
+    <div class="container">
+        <p>
+            Our models predicts the image to be of <b>{{img_obj.ans_class}}</b> class with a confidence score of {{img_obj.score}}.
+        </p>
+    </div>
+    {% endif %}
+</div>
 
 {% endblock %}

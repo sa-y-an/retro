@@ -3,6 +3,13 @@
 
 {% block content %}
 
-Ecg  Rate 
+<div class="container">
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="myfile" />
+        <input type="submit" name="submit" value="Upload" />
+    </form>
+    
+</div>
 
 {% endblock %}
