@@ -17,6 +17,6 @@ urlpatterns = [
     path('resp/', views.ecg , name='resp'),
     path('temp/', views.ecg , name='temp'),
 
-    path('about/', views.ecg , name='about')
+    path('about/', views.about , name='about')
 
 ]

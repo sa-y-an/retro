@@ -18,3 +18,7 @@ def resp(request) :
 
 def temp(request) :
     return render(request, 'home/temp.html')
+
+
+def about(request) :
+    return render(request, 'home/about.html')
