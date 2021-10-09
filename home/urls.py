@@ -10,5 +10,11 @@ app_name = 'home'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home , name='home')
+    path('', views.home , name='home'),
+    path('ecg/', views.ecg , name='ecg'),
+    path('eda/', views.ecg , name='eda'),
+    path('emg/', views.ecg , name='emg'),
+    path('resp/', views.ecg , name='resp'),
+    path('temp/', views.ecg , name='temp'),
+
 ]
