@@ -7,7 +7,7 @@ import json
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-params = json.load(open(os.path.join(BASE_DIR, 'Qriosity/config.json'), 'r'))
+params = json.load(open(os.path.join(BASE_DIR, 'stress_detector/config.json'), 'r'))
 
 
 SECRET_KEY = params['SECRET_KEY']
@@ -15,7 +15,7 @@ SECRET_KEY = params['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = params['DEBUG']
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'home',
 ]
 
 MIDDLEWARE = [
@@ -41,10 +42,11 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'stress_detector.urls'
 
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -125,8 +127,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = os.environ["EMAIL_HOST_USER"]
-EMAIL_HOST_PASSWORD = os.environ["EMAIL_HOST_PASSWORD"]
+EMAIL_HOST_USER = params["EMAIL_HOST_USER"]
+EMAIL_HOST_PASSWORD = params["EMAIL_HOST_PASSWORD"]
 
 
 
