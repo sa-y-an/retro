@@ -39,7 +39,7 @@
             <thead>
                 <tr>
                   <th scope="col">Excitation Type</th>
-                  <th scope="col">Percentage</th>
+                  <th scope="col">Fraction of time </th>
                   
                 </tr>
               </thead>
@@ -59,6 +59,47 @@
         </p>
 
     {% endif %}
+
+    <div class="container">
+        <h3 id="instructions">
+            Instructions To Use the site
+        </h3>
+
+        <p>
+            To find out your stress level just input signal from anyone of the modalalities available on the navbar sampled at 700Hz 
+            and has a minimum length of 1024 samples. And you will get your stress level.
+            <br>
+            <U>Conditions</U>
+            <ul>
+                <li>
+                    upload a .csv file or .txt file consisting of your signal data.
+                </li>
+                <li>
+                    If you are using .txt make sure the values are tab or space separated.
+                </li>
+                <li>
+                    The signal should be sampled at 700Hz.
+                </li>
+            </ul>
+        </p>
+
+
+        <h5>
+            Download Sample EDA Data
+        </h5>
+        <br>
+        <a href="https://drive.google.com/file/d/17RzbfZ568KUnCKQM7yAxdhvp1sLDu41y/view?usp=sharing">
+            <button class="btn btn-secondary">
+                .CSV File
+            </button>
+        </a>
+        
+        <a href="https://drive.google.com/file/d/1DJVm5t89rlcBXcakce3r0Y5wP4KLsQzI/view?usp=sharing">
+            <button class="btn btn-secondary">
+                .TXT File
+            </button>
+        </a>
+    </div>
     
 </div>
 

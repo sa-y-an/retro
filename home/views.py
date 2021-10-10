@@ -25,7 +25,7 @@ def eda(request):
         print(ac_class, confidence_score)
 
 
-        return render(request, 'home/eda.html',{ "class" : ac_class, "score" : confidence_score  } )
+        return render(request, 'home/eda.html',{ "class" : ac_class, "score" : confidence_score , "path" :path  } )
 
     else :
         return render(request, 'home/eda.html')
@@ -46,7 +46,7 @@ def emg(request) :
         print(ac_class, confidence_score)
 
 
-        return render(request, 'home/emg.html',{ "class" : ac_class, "score" : confidence_score  } )
+        return render(request, 'home/emg.html',{ "class" : ac_class, "score" : confidence_score, "path" :path   } )
 
     else :
         return render(request, 'home/emg.html')
@@ -65,7 +65,7 @@ def ecg(request) :
         print(ac_class, confidence_score)
 
 
-        return render(request, 'home/ecg.html',{ "class" : ac_class, "score" : confidence_score  } )
+        return render(request, 'home/ecg.html',{ "class" : ac_class, "score" : confidence_score , "path" :path  } )
 
     else :
         return render(request, 'home/ecg.html')
@@ -84,7 +84,7 @@ def resp(request) :
         print(ac_class, confidence_score)
 
 
-        return render(request, 'home/resp.html',{ "class" : ac_class, "score" : confidence_score  } )
+        return render(request, 'home/resp.html',{ "class" : ac_class, "score" : confidence_score , "path" :path  } )
 
     else :
         return render(request, 'home/resp.html')
@@ -101,7 +101,7 @@ def temp(request) :
         print(ac_class, confidence_score)
 
 
-        return render(request, 'home/temp.html',{ "class" : ac_class, "score" : confidence_score  } )
+        return render(request, 'home/temp.html',{ "class" : ac_class, "score" : confidence_score, "path" :path  } )
 
     else :
         return render(request, 'home/temp.html')
