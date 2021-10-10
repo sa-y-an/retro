@@ -15,7 +15,9 @@ From there Django Handles the rest.
 5. While feeding the sequences to the model, providing a Batch Normaliztion Layer to normalize the input. 
 6. Training the Model with the Architecture shown below. 
 
-The architecture used is the following. 
+<br/>
+
+## The architecture used is the following. 
 <img src='model.png'>
 
 ## Future Scope - 
