@@ -32,6 +32,9 @@ def nn_predictions(path,modal) :
     a = np.argmax(model.predict(sequences), axis=1)
     t = np.bincount(a).argmax()
     f = np.bincount(a)[t]
+
+
+    cont = ['neutral', 'stress', 'amusement']
     
     
-    return t,f/ln
+    return cont[t],f*(1024/700), ln*(1024/700)

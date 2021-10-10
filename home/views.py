@@ -16,7 +16,7 @@ def about(request) :
 def eda(request):
     if request.method == 'POST' :
         path = request.FILES['myfile'] # this is my file
-        ac_class, confidence_score = nn_predictions(path,'EDA')
+        ac_class, confidence_score, secs = nn_predictions(path,'EDA')
 
         print(path)
 
@@ -25,7 +25,7 @@ def eda(request):
         print(ac_class, confidence_score)
 
 
-        return render(request, 'home/eda.html',{ "class" : ac_class, "score" : confidence_score , "path" :path  } )
+        return render(request, 'home/eda.html',{ "class" : ac_class, "score" : confidence_score , "path" :path , "time" : secs } )
 
     else :
         return render(request, 'home/eda.html')
@@ -37,7 +37,7 @@ def emg(request) :
 
     if request.method == 'POST' :
         path = request.FILES['myfile'] # this is my file
-        ac_class, confidence_score = nn_predictions(path,'EMG')
+        ac_class, confidence_score, secs = nn_predictions(path,'EMG')
 
         print(path)
 
@@ -46,7 +46,7 @@ def emg(request) :
         print(ac_class, confidence_score)
 
 
-        return render(request, 'home/emg.html',{ "class" : ac_class, "score" : confidence_score, "path" :path   } )
+        return render(request, 'home/emg.html',{ "class" : ac_class, "score" : confidence_score, "path" :path , "time" : secs   } )
 
     else :
         return render(request, 'home/emg.html')
@@ -56,7 +56,7 @@ def emg(request) :
 def ecg(request) :
     if request.method == 'POST' :
         path = request.FILES['myfile'] # this is my file
-        ac_class, confidence_score = nn_predictions(path,'ECG')
+        ac_class, confidence_score, secs = nn_predictions(path,'ECG')
 
         print(path)
 
@@ -65,7 +65,7 @@ def ecg(request) :
         print(ac_class, confidence_score)
 
 
-        return render(request, 'home/ecg.html',{ "class" : ac_class, "score" : confidence_score , "path" :path  } )
+        return render(request, 'home/ecg.html',{ "class" : ac_class, "score" : confidence_score , "path" :path,  "time" : secs   } )
 
     else :
         return render(request, 'home/ecg.html')
@@ -75,7 +75,7 @@ def ecg(request) :
 def resp(request) :
     if request.method == 'POST' :
         path = request.FILES['myfile'] # this is my file
-        ac_class, confidence_score = nn_predictions(path,'Resp')
+        ac_class, confidence_score, secs = nn_predictions(path,'Resp')
 
         print(path)
 
@@ -84,7 +84,7 @@ def resp(request) :
         print(ac_class, confidence_score)
 
 
-        return render(request, 'home/resp.html',{ "class" : ac_class, "score" : confidence_score , "path" :path  } )
+        return render(request, 'home/resp.html',{ "class" : ac_class, "score" : confidence_score , "path" :path ,  "time" : secs  } )
 
     else :
         return render(request, 'home/resp.html')
@@ -92,7 +92,7 @@ def resp(request) :
 def temp(request) :
     if request.method == 'POST' :
         path = request.FILES['myfile'] # this is my file
-        ac_class, confidence_score = nn_predictions(path,'Temp')
+        ac_class, confidence_score, secs = nn_predictions(path,'Temp')
 
         print(path)
 
@@ -101,7 +101,7 @@ def temp(request) :
         print(ac_class, confidence_score)
 
 
-        return render(request, 'home/temp.html',{ "class" : ac_class, "score" : confidence_score, "path" :path  } )
+        return render(request, 'home/temp.html',{ "class" : ac_class, "score" : confidence_score, "path" :path,  "time" : secs   } )
 
     else :
         return render(request, 'home/temp.html')
