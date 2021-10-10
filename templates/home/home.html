@@ -5,7 +5,7 @@
 
 
     <div class="text-white">
-        <div class="jumbotron">
+        <div class="jumbotron" style="min-height: 95vh;">
             
                 <div class="main-head text-center">
                     Know Your Stress Level 
@@ -27,15 +27,95 @@
 
                 <br/>
 
-                <button class="btn btn-secondary">
-                    Stress Check
-                </button>
-
-         
-            
+                <a href="#below">
+                    <button class="btn btn-secondary">
+                        Stress Check
+                    </button>
+                </a>
         </div>
-        
+
+        </div>
     </div>
+    <!-- closes base big div tag -->
+        
+    <div id="below" class="container-fluid bg-dark bg-gradient" style="min-height: 100vh;">
+        <br> <br> <br>
+        <div class="container text-white">
+
+            <h3>
+                Background
+            </h3>
+
+            <p>
+                In Medical Assitant systems people are opten skeptical of false positives. Thus the general confidence in them is quite low. 
+                To combat this issue I have considered 5 modalities to predict stress. Furthermore, depending on the smart watch the owner posseses,
+                he may have acess to a portion of the modalities. Thus, this system is fairly general. If a user gets high stress values across 
+                various modalities. It is a sign of consern. 
+                
+                <br>
+
+                The 5 modalalities are visible on the navbar. Research have proven each of them are closely related to stress. For details on the neural 
+                network architecture and training protocol please visit the Readme section of this <a href="https://github.com/sa-y-an/retro/blob/main/train_dir/README.md" >repo</a>. 
+                The model is trained on the WESAD Dataset. 
+
+                <br>
+
+                The dataset provides many more modalities like heart beat which will be added later
+
+            </p>
+
+            <h3>
+                Preprocessing
+            </h3>
+            
+            <p>
+                The analog WESAD data is sampled at 700Hz, which implies for 1 second we have 700 sample points. I have considered 
+                time sequences consisting of a continuous chunk of 1024 samples while training ie this model will give a prediction 
+                every 1.4 seconds (1024/700). Since different subjects have different responses on the signal values,I have used min-max normalisation.
+                Furthermore, I have standarized each sequence by z-normalization to ensure uniform scale.  <br/>
+                However, while using this site no Preprocessing is required as I have setup the Preprocessing pipelines accordingly.
+            </p>
+
+            <h3>
+                Instructions To Use the site
+            </h3>
+
+            <p>
+                To find out your stress level just input signal from anyone of the modalalities available on the navbar sampled at 700Hz 
+                and has a minimum length of 1024 samples. And you will get your stress level.
+                <br>
+                <U>Conditions</U>
+                <ul>
+                    <li>
+                        upload a .csv file or .txt file consisting of your signal data.
+                    </li>
+                    <li>
+                        If you are using .txt make sure the values are tab or space separated.
+                    </li>
+                    <li>
+                        The signal should be sampled at 700Hz.
+                    </li>
+                </ul>
+            </p>
+
+
+            Download Sample EDA Data
+            <a href="https://drive.google.com/file/d/17RzbfZ568KUnCKQM7yAxdhvp1sLDu41y/view?usp=sharing">
+                <button class="btn btn-secondary">
+                    .CSV File
+                </button>
+            </a>
+            <a href="https://drive.google.com/file/d/1DJVm5t89rlcBXcakce3r0Y5wP4KLsQzI/view?usp=sharing">
+                <button class="btn btn-secondary">
+                    .TXT File
+                </button>
+            </a>
+
+
+        </div>
+    </div>
+        
+ 
 
 
 
