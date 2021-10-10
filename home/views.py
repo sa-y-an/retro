@@ -18,14 +18,17 @@ def eda(request):
         path = request.FILES['myfile'] # this is my file
         ac_class, confidence_score = nn_predictions(path,'EDA')
 
+        print(path)
+
+        print('here .....................')
+
         print(ac_class, confidence_score)
 
 
-        return render(request, 'home/emg.html',{ "class" : ac_class, "score" : confidence_score, "path" :path  } )
+        return render(request, 'home/eda.html',{ "class" : ac_class, "score" : confidence_score  } )
 
     else :
-        return render(request, 'home/emg.html')
-    
+        return render(request, 'home/eda.html')
 
 
 
@@ -51,11 +54,55 @@ def emg(request) :
 
 
 def ecg(request) :
-    return render(request, 'home/ecg.html')
+    if request.method == 'POST' :
+        path = request.FILES['myfile'] # this is my file
+        ac_class, confidence_score = nn_predictions(path,'ECG')
+
+        print(path)
+
+        print('here .....................')
+
+        print(ac_class, confidence_score)
+
+
+        return render(request, 'home/ecg.html',{ "class" : ac_class, "score" : confidence_score  } )
+
+    else :
+        return render(request, 'home/ecg.html')
+
+
 
 def resp(request) :
-    return render(request, 'home/resp.html')
+    if request.method == 'POST' :
+        path = request.FILES['myfile'] # this is my file
+        ac_class, confidence_score = nn_predictions(path,'Resp')
+
+        print(path)
+
+        print('here .....................')
+
+        print(ac_class, confidence_score)
+
+
+        return render(request, 'home/resp.html',{ "class" : ac_class, "score" : confidence_score  } )
+
+    else :
+        return render(request, 'home/resp.html')
 
 def temp(request) :
-    return render(request, 'home/temp.html')
+    if request.method == 'POST' :
+        path = request.FILES['myfile'] # this is my file
+        ac_class, confidence_score = nn_predictions(path,'Temp')
+
+        print(path)
+
+        print('here .....................')
+
+        print(ac_class, confidence_score)
+
+
+        return render(request, 'home/temp.html',{ "class" : ac_class, "score" : confidence_score  } )
+
+    else :
+        return render(request, 'home/temp.html')
 
