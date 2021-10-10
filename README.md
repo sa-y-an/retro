@@ -37,4 +37,5 @@ python local.py runserver
 
 # License 
 
-This is a starware ⭐, which means you can use my code as long as you star this repo.
+- This is a starware ⭐, which means you can use my code as long as you star this repo.
+- This is published under  BSD-2-Clause License.
