@@ -4,32 +4,62 @@
 {% block content %}
 
 <div class="container">
-    <h2>
-        Got your EDA Data
-    </h2>
 
-    <div class="container upload">
-        <form method="post" enctype="multipart/form-data" action="">
-                <div class="mb-3 form-group formcont">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <button type="submit" class="btn btn-primary">Upload</button>
+    <div class="main-head">
+        EDA Data 
+    </div>
+
+    <br/>
+
+
+    <div class="container">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="mb-3">
+    
+                <input type="file" name="myfile" class="btn btn-secondary" />
+                <input type="submit" name="submit" value="Upload"  class="btn btn-secondary"/>
+    
             </div>
         </form>
-        
-        {% if img_obj %}
-            <p>Succesfully uploaded : {{img_obj.title}}</p>
-            
-        {% endif %}
-    </div>
 
-    {% if img_obj.ans_class %}
-    <div class="container">
-        <p>
-            Our models predicts the image to be of <b>{{img_obj.ans_class}}</b> class with a confidence score of {{img_obj.score}}.
-        </p>
     </div>
+    
+
+    {% if score %}
+        <div class="sub-head">
+            Yout last Submission {{path }} was sucessfull
+        </div>
+           
+       
+        Here are the results - 
+
+        <table class="table table-dark table-striped">
+            
+            <thead>
+                <tr>
+                  <th scope="col">Excitation Type</th>
+                  <th scope="col">Percentage</th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">{{ class }}</th>
+                  <td>{{ score }}</td>
+                </tr>
+                </tbody> 
+        </table>
+
+
+    {% else %}
+
+        <p>
+            Input the Files
+        </p>
+
     {% endif %}
+    
 </div>
 
 {% endblock %}
