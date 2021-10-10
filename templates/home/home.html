@@ -37,6 +37,106 @@
         </div>
     </div>
     <!-- closes base big div tag -->
+
+
+    <div id="instructions" class="container" style="min-height: 50vh;">
+        <br>
+        <br>
+
+        <h1>
+            Measure Your Stress Level from this website
+        </h1>
+
+        <p>
+            
+             
+        </p>
+
+        <p>
+            <h3>
+                How to Measure Stress From this site
+            </h3>
+        </p>
+
+
+        <div class="holder">
+            <div >
+                <img src="{% static 'images/explain.png'%}" alt="explain" width="70%" align="center">
+            </div>
+            
+
+            <div class="gyaan">
+                <ul>
+                    <li>
+                        People now a day are quite stressed , but they rarely see a doctor to measure the stress level. 
+                        
+                    </li>
+                    <li>
+                        This site provides a way to <b> measure the stress level from the comfort of home </b> . 
+                    </li>
+                    <li>
+                        Generally modern day <b>
+                            smart watches
+                        </b>  measures some form of physiological data from which the stress level can be calculated. 
+                        like - ecg, emg, eda, respiration rate, body temperature, heart rate, pulse rate etc.
+                    </li>
+                    <li>
+                        So I trained a Neural Network that can predict in which excitation state you are viz - 
+                        <ol>
+                            <li>
+                                Neutral 
+                            </li>
+                            <li>
+                                Stress
+                            </li>
+                            <li>
+                                Amusement
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <h3>
+                What Data to Enter ?
+            </h3>
+
+            <p>
+                <ul>
+                    <li>
+                        Enter any one ecg, emg, eda, temperature, respiration data obtained from your smart watch
+                        or any other device sampled at 700 Hz at their respective page ( see navbar ).
+                    </li>
+                    <li>
+                        File Format - CSV or TXT 
+                    </li>
+                    <li>
+                        The Model will give a prediction per 1024 samples ie 1.4 seconds, either for those 1.4 seconds your data is stressed, neutral or in amusement.  
+                    </li>
+                    <li>
+                        In the end we output the most prevalent state, with the amount of seconds it was prevalent.
+
+                    </li>
+
+                    <li>
+                        Sample Data Can be found below.
+                    </li>
+                </ul>
+            </p>
+
+            <p>
+                <h3>
+                    Dont have data currently ?, but want to play around !!
+                </h3>
+
+                <p>
+                    We got you covered, download the sample data and upload it.
+                </p>
+            </p>
+        </div>
+    </div>
+
         
     <div id="below" class="container-fluid bg-dark bg-gradient" style="min-height: 100vh;">
         <br> <br> <br>
