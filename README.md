@@ -34,8 +34,3 @@ python local.py runserver
 
 ```
 > PS : I use local.py in local environment to maintain a smooth flow, refer to my stackoverflow answer here - https://stackoverflow.com/questions/68766668/django-best-practice-for-running-switching-dev-debug-product-mode/68766902#68766902
-
-# License 
-
-- This is a starware ⭐, which means you can use my code as long as you star this repo.
-- This is published under  BSD-2-Clause License.
