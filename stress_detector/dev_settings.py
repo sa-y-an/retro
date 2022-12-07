@@ -1,13 +1,14 @@
 from pathlib import Path
-import os 
-import json 
+import os
+import json
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-params = json.load(open(os.path.join(BASE_DIR, 'stress_detector/config.json'), 'r'))
+params = json.load(
+    open(os.path.join(BASE_DIR, 'stress_detector/config.json'), 'r'))
 
 
 SECRET_KEY = params['SECRET_KEY']
@@ -106,7 +107,6 @@ USE_L10N = True
 USE_TZ = True
 
 
-
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
@@ -121,7 +121,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
-#SMTP Configuration
+# SMTP Configuration
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
@@ -129,8 +129,6 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = params["EMAIL_HOST_USER"]
 EMAIL_HOST_PASSWORD = params["EMAIL_HOST_PASSWORD"]
-
-
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
