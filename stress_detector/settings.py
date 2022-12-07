@@ -9,6 +9,7 @@ SECRET_KEY = "baalerjhaaant"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+CSRF_TRUSTED_ORIGINS = ['https://retro-production.up.railway.app']
 ALLOWED_HOSTS = ['*']
 
 
