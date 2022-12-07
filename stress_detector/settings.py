@@ -6,11 +6,6 @@ import json
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
-params = json.load(
-    open(os.path.join(BASE_DIR, 'stress_detector/config.json'), 'r'))
-
-
 SECRET_KEY = "baalerjhaaant"
 
 # SECURITY WARNING: don't run with debug turned on in production!
