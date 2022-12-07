@@ -14,6 +14,127 @@
 
     <title>Stress Detector</title>
 
+
+    <style>
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+  
+.jumbotron{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    
+    
+}
+
+.box {
+    padding: 0.5em;
+    border-radius: 1em;
+    max-width: 40vw;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+@media screen and (max-width: 480px) {
+    .box{
+        max-width: 90vw;
+    }
+    
+}
+
+.main-head{
+    font-size: 3.5em;
+    font-weight: bold;
+    animation: mymove 4s infinite;
+}
+
+.sub-head {
+    font-size: 2em;
+    font-weight: lighter;
+
+}
+
+@keyframes mymove {
+    50% {text-shadow: 4px 4px 4px white;}
+  }
+
+.big{
+
+    min-height: 100vh;
+    overflow-y: hidden;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.btn {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+.box2 {
+    padding: 2em;
+    border-radius: 1em;
+    max-width: 50vw;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-weight: lighter;
+    font-family: sans-serif;
+    /* margin: 4em; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    
+
+}
+
+@media screen and (max-width: 480px) {
+    .box2{
+        max-width: 90vw;
+    }
+    
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* align-items: center; */
+}
+
+.holder{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.gyaan {
+    display: flex;
+    flex-direction: column;
+}
+
+
+    </style>
+
+
 </head>
 <body>
 
